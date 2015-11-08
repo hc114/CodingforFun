@@ -13,14 +13,14 @@ public class BullsandCows {
 		int cows = 0;
 
 		for (int j = 0; j < guess.length(); j++) {
-			if(!secretMap.containsKey(guess.charAt(j))){
-				continue;
-			}
-			if (j == secretMap.get(guess.charAt(j))) {
-				bulls++;
-			} else {
-				cows++;
-			}
+			if(secretMap.containsKey(guess.charAt(j))){
+				if (j == secretMap.get(guess.charAt(j))) {
+					secretMap.remove((guess.charAt(j)));
+					bulls++;
+				}else{
+					cows++;
+				}
+			}	
 		}
 		System.out.println(secretMap.toString());
 		String statement=Integer.valueOf(bulls)+"B"+Integer.valueOf(cows)+"C";
