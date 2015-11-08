@@ -40,8 +40,8 @@ public class BullsandCows {
 	}
 
 	public static void main(String[] args) {
-		String secret = "1234";
-		String guess= "0111";
+		String secret = "11";
+		String guess= "01";
 		String result = getHint(secret,guess);
 		System.out.println(result);
 	}
